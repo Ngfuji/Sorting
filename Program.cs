@@ -1,11 +1,10 @@
-﻿using System.Diagnostics; // Import Stopwatch
+﻿using System.Diagnostics;
 class BowGowSort
 {
     static Random rand = new Random();
 
     static void Main()
     {
-        // Read numbers from the file and convert them to an integer array
         int[] numbers = File.ReadAllLines("numbers.txt")
                             .Select(int.Parse)
                             .ToArray();
@@ -44,7 +43,7 @@ class BowGowSort
         for (int i = 0; i < array.Length; i++)
         {
             int randomIndex = rand.Next(array.Length);
-            (array[i], array[randomIndex]) = (array[randomIndex], array[i]); // Swap
+            (array[i], array[randomIndex]) = (array[randomIndex], array[i]);
         }
     }
 }
